@@ -1,0 +1,79 @@
+:root {
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --color-01: #004f52;
+  --color-02: #10f9f1;
+  --color-03: #f910d5;
+  --color-04: #7810f9;
+  --color-05: #721728;
+  --color-06: #56ff29;
+  --color-07: #000000;
+  --color-08: #f6fd3f;
+
+  --color-primary: var(--color-01);
+  --color-text: var(--color-07);
+  --color-secondary: var(--color-02);
+}
+
+
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  font-family: var(--system-ui);
+  background-image:
+    linear-gradient(
+      90deg, 
+      var(--color-primary), var(--color-03),var(--color-08),var(--color-03),var(--color-primary), var(--color-03),var(--color-08)
+    );
+  background-size: 300% 100%;
+  animation: animateBg 2s infinite linear;
+}
+body.dark {
+  background-image:
+    linear-gradient(
+      90deg, 
+      var(--color-primary), var(--color-03),var(--color-08),var(--color-03),var(--color-primary), var(--color-03),var(--color-08)
+    );
+}
+body.dark-alternate {
+  --gc1: var(--color-01);
+  --gc2: var(--color-04);
+  --gc3: var(--color-03);
+  background-image:
+    linear-gradient(
+      90deg, 
+      var(--gc1), var(--gc2), var(--gc3),var(--gc2),var(--gc1),var(--gc2),var(--gc3)
+    );
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+h1 {
+  text-align: center;
+}
+section.art {
+  display: flex;
+  gap: 1em;
+  padding: 2em 1em;
+}
+section.art article {
+  padding: 2em 1em;
+  max-width: 33.3%;
+}
+section.art:nth-child(even) {
+  flex-direction: row-reverse;
+}
+section.art .images {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.art .images img {
+  max-width: 100%;
+  max-height: auto;
+}
