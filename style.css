@@ -26,7 +26,7 @@ body {
       var(--color-primary), var(--color-03),var(--color-08),var(--color-03),var(--color-primary), var(--color-03),var(--color-08)
     );
   background-size: 300% 100%;
-  animation: animateBg 2s infinite linear;
+  animation: animateBg 15s infinite linear;
 }
 body.dark {
   background-image:
